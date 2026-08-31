@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog Proyek Investasi | Konsultan Keuangan</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            900: '#1e3a8a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom scrollbar for a polished look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8; 
+        }
+        
+        .hero-pattern {
+            background-color: #1e3a8a;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%232563eb' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased selection:bg-primary-500 selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <div class="bg-primary-600 text-white p-2 rounded-lg">
+                        <i class="fa-solid fa-chart-line text-xl"></i>
+                    </div>
+                    <span class="font-bold text-2xl text-primary-900 tracking-tight">Investa<span class="text-primary-600">Pro</span></span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#beranda" class="text-gray-600 hover:text-primary-600 font-medium transition-colors">Beranda</a>
+                    <a href="#proyek" class="text-gray-600 hover:text-primary-600 font-medium transition-colors">Daftar Proyek</a>
+                    <a href="#cara-kerja" class="text-gray-600 hover:text-primary-600 font-medium transition-colors">Cara Kerja</a>
+                </div>
+                <div>
+                    <a href="#proyek" class="bg-primary-600 hover:bg-primary-700 text-white px-6 py-2.5 rounded-full font-medium transition-all shadow-md hover:shadow-lg inline-block">
+                        Mulai Investasi
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="beranda" class="hero-pattern text-white py-24 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-primary-900/90 to-primary-800/80"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-6">
+                        Kembangkan Dana Anda di Proyek Bisnis <span class="text-yellow-400">Terpilih & Terverifikasi</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-blue-100 mb-8 max-w-lg">
+                        Kami menghubungkan Anda dengan peluang investasi sektor riil dengan imbal hasil terukur, margin jelas, dan transparansi penuh.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#proyek" class="bg-white text-primary-900 hover:bg-gray-100 px-8 py-3.5 rounded-full font-bold text-lg transition-all text-center shadow-lg">
+                            Lihat Katalog Proyek
+                        </a>
+                        <a href="https://wa.me/6281234567890?text=Halo%20Konsultan,%20saya%20ingin%20berkonsultasi%20mengenai%20perencanaan%20keuangan%20dan%20investasi." target="_blank" class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary-900 px-8 py-3.5 rounded-full font-bold text-lg transition-all text-center">
+                            <i class="fa-brands fa-whatsapp mr-2"></i> Konsultasi Gratis
+                        </a>
+                    </div>
+                </div>
+                <div class="hidden lg:block relative">
+                    <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Consultant Meeting" class="rounded-2xl shadow-2xl border-4 border-white/10 transform rotate-2 hover:rotate-0 transition-transform duration-500">
+                    <!-- Floating Badge -->
+                    <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-xl flex items-center gap-4 animate-bounce">
+                        <div class="bg-green-100 text-green-600 p-3 rounded-full">
+                            <i class="fa-solid fa-shield-halved text-2xl"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-500 font-semibold uppercase">Legalitas Jelas</p>
+                            <p class="text-gray-900 font-bold">100% Amanah</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats / Trust Builders -->
+    <section class="py-10 bg-white border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <h3 class="text-3xl font-bold text-primary-600 mb-1">15+</h3>
+                    <p class="text-sm text-gray-500 font-medium uppercase tracking-wide">Proyek Berjalan</p>
+                </div>
+                <div>
+                    <h3 class="text-3xl font-bold text-primary-600 mb-1">Rp 25M+</h3>
+                    <p class="text-sm text-gray-500 font-medium uppercase tracking-wide">Dana Dikelola</p>
+                </div>
+                <div>
+                    <h3 class="text-3xl font-bold text-primary-600 mb-1">200+</h3>
+                    <p class="text-sm text-gray-500 font-medium uppercase tracking-wide">Investor Aktif</p>
+                </div>
+                <div>
+                    <h3 class="text-3xl font-bold text-primary-600 mb-1">100%</h3>
+                    <p class="text-sm text-gray-500 font-medium uppercase tracking-wide">Transparansi</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Listing Section -->
+    <section id="proyek" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-primary-600 font-semibold tracking-wider uppercase text-sm">Peluang Tersedia</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2 mb-4">Katalog Proyek Investasi</h2>
+                <p class="text-gray-600 text-lg">Pilih proyek bisnis yang sesuai dengan profil risiko dan target return Anda. Klik tombol JOIN untuk terhubung langsung dengan tim kami via WhatsApp.</p>
+            </div>
+
+            <!-- Grid Container untuk Proyek (Di-render via JavaScript) -->
+            <div id="project-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Data Proyek akan dimuat di sini -->
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- How it Works -->
+    <section id="cara-kerja" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Cara Memulai Investasi</h2>
+                <p class="text-gray-600">Langkah mudah untuk mulai menumbuhkan aset Anda bersama kami.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="text-center relative">
+                    <div class="w-16 h-16 bg-primary-100 text-primary-600 rounded-full flex items-center justify-center mx-auto text-2xl font-bold mb-4 z-10 relative">1</div>
+                    <div class="hidden md:block absolute top-8 left-[60%] w-[80%] h-0.5 bg-gray-200"></div>
+                    <h4 class="font-bold text-lg mb-2">Pilih Proyek</h4>
+                    <p class="text-gray-500 text-sm">Pelajari detail, nilai, margin, dan bagi hasil dari katalog proyek yang tersedia.</p>
+                </div>
+                <div class="text-center relative">
+                    <div class="w-16 h-16 bg-primary-100 text-primary-600 rounded-full flex items-center justify-center mx-auto text-2xl font-bold mb-4 z-10 relative">2</div>
+                    <div class="hidden md:block absolute top-8 left-[60%] w-[80%] h-0.5 bg-gray-200"></div>
+                    <h4 class="font-bold text-lg mb-2">Klik Join (WhatsApp)</h4>
+                    <p class="text-gray-500 text-sm">Sistem kami akan otomatis mengirimkan format detail proyek yang Anda minati ke admin kami.</p>
+                </div>
+                <div class="text-center relative">
+                    <div class="w-16 h-16 bg-primary-100 text-primary-600 rounded-full flex items-center justify-center mx-auto text-2xl font-bold mb-4 z-10 relative">3</div>
+                    <div class="hidden md:block absolute top-8 left-[60%] w-[80%] h-0.5 bg-gray-200"></div>
+                    <h4 class="font-bold text-lg mb-2">Tanda Tangan MoU</h4>
+                    <p class="text-gray-500 text-sm">Penjelasan legalitas, survey lokasi (opsional), dan penandatanganan akad kerjasama di notaris.</p>
+                </div>
+                <div class="text-center relative">
+                    <div class="w-16 h-16 bg-primary-100 text-primary-600 rounded-full flex items-center justify-center mx-auto text-2xl font-bold mb-4 z-10 relative">4</div>
+                    <h4 class="font-bold text-lg mb-2">Terima Bagi Hasil</h4>
+                    <p class="text-gray-500 text-sm">Pantau perkembangan bisnis dan terima bagi hasil sesuai dengan jadwal akad yang disepakati.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8 border-t-4 border-primary-600">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="bg-white text-primary-600 p-2 rounded-lg">
+                            <i class="fa-solid fa-chart-line text-xl"></i>
+                        </div>
+                        <span class="font-bold text-2xl tracking-tight">Investa<span class="text-primary-400">Pro</span></span>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        Mitra konsultan keuangan terpercaya Anda. Kami menyeleksi proyek-proyek bisnis potensial dengan manajemen risiko yang ketat untuk memberikan keamanan dan kenyamanan bagi para investor.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fa-brands fa-instagram text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fa-brands fa-linkedin text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fa-brands fa-facebook text-xl"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Tautan Cepat</h4>
+                    <ul class="space-y-3 text-sm text-gray-400">
+                        <li><a href="#beranda" class="hover:text-primary-400 transition-colors">Beranda</a></li>
+                        <li><a href="#proyek" class="hover:text-primary-400 transition-colors">Katalog Proyek</a></li>
+                        <li><a href="#cara-kerja" class="hover:text-primary-400 transition-colors">Cara Kerja</a></li>
+                        <li><a href="#" class="hover:text-primary-400 transition-colors">Syarat & Ketentuan</a></li>
+                        <li><a href="#" class="hover:text-primary-400 transition-colors">Kebijakan Privasi</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Hubungi Kami</h4>
+                    <ul class="space-y-4 text-sm text-gray-400">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-location-dot mt-1 text-primary-400"></i>
+                            <span>Gedung Keuangan Jaya Lt. 4<br>Jl. Jend. Sudirman No. 123, Jakarta Selatan</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-envelope text-primary-400"></i>
+                            <span>investor@investapro.com</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-brands fa-whatsapp text-primary-400 text-lg"></i>
+                            <span>+62 812-3456-7890</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-gray-800 text-center md:text-left text-xs text-gray-500">
+                <p class="mb-2"><strong class="text-gray-400">DISCLAIMER:</strong> Investasi mengandung risiko. Kinerja masa lalu tidak menjamin kinerja masa depan. Harap pelajari detail proposal, legalitas, dan skema bisnis sebelum memutuskan untuk berinvestasi. Kami bertindak sebagai konsultan yang menghubungkan, namun keputusan akhir dan risiko berada di tangan investor.</p>
+                <p>&copy; 2026 InvestaPro Financial Consultant. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // --- KONFIGURASI NOMOR WA ADMIN ---
+        // Ganti dengan nomor WhatsApp Admin Anda, pastikan diawali dengan kode negara (62 untuk Indonesia tanpa tanda +)
+        const NOMOR_WA_ADMIN = "6281234567890"; 
+
+        // --- DATA PROYEK ---
+        // Anda dapat menambah, menghapus, atau mengubah data proyek di bawah ini.
+        const daftarProyek = [
+            {
+                id: 1,
+                judul: "Ekspansi Jaringan Minimarket Syariah",
+                gambar: "https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                kategori: "Ritel",
+                nilaiInvestasi: "Rp 1.500.000.000",
+                margin: "18% - 22% / Tahun",
+                bagiHasil: "Investor 60% : Pengelola 40%",
+                durasi: "3 Tahun",
+                detail: "Pembangunan 3 gerai baru minimarket dengan konsep syariah di area padat penduduk. Manajemen sudah berjalan 5 tahun dengan track record omzet stabil."
+            },
+            {
+                id: 2,
+                judul: "Pembangunan Indekos Premium Dekat Kampus",
+                gambar: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                kategori: "Properti",
+                nilaiInvestasi: "Rp 3.200.000.000",
+                margin: "15% / Tahun + Capital Gain",
+                bagiHasil: "Investor 70% : Manajemen 30%",
+                durasi: "5 Tahun",
+                detail: "Akusisi lahan dan pembangunan 20 pintu indekos eksklusif berfasilitas lengkap, berlokasi kurang dari 1 km dari Universitas terkemuka. Demand sewa tinggi."
+            },
+            {
+                id: 3,
+                judul: "Klinik Kecantikan & Estetika Cabang Ke-4",
+                gambar: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                kategori: "Kesehatan",
+                nilaiInvestasi: "Rp 850.000.000",
+                margin: "25% - 30% / Tahun",
+                bagiHasil: "Investor 50% : Founder 50%",
+                durasi: "2 Tahun",
+                detail: "Pendanaan untuk alat medis lanjutan dan renovasi interior cabang baru. Brand klinik sudah dikenal dan memiliki basis pelanggan loyal. Balik modal diproyeksi cepat."
+            },
+            {
+                id: 4,
+                judul: "Pabrik Pengolahan Kopi Ekspor",
+                gambar: "https://images.unsplash.com/photo-1611162458324-aae1eb4129a4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                kategori: "Manufaktur",
+                nilaiInvestasi: "Rp 2.000.000.000",
+                margin: "20% / Tahun",
+                bagiHasil: "Investor 55% : Pengelola 45%",
+                durasi: "4 Tahun",
+                detail: "Peningkatan kapasitas mesin roasting dan pengemasan untuk memenuhi kontrak ekspor ke Timur Tengah. Bahan baku terjamin dari petani binaan."
+            },
+            {
+                id: 5,
+                judul: "Waralaba Restoran Cepat Saji",
+                gambar: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                kategori: "F&B",
+                nilaiInvestasi: "Rp 500.000.000",
+                margin: "20% - 24% / Tahun",
+                bagiHasil: "Investor 50% : Pengelola 50%",
+                durasi: "2.5 Tahun",
+                detail: "Pembelian lisensi franchise brand F&B nasional yang sedang viral, termasuk setup lokasi, rekrutmen karyawan, dan modal kerja 3 bulan pertama."
+            },
+            {
+                id: 6,
+                judul: "Pengembangan Software ERP UMKM",
+                gambar: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                kategori: "Teknologi",
+                nilaiInvestasi: "Rp 400.000.000",
+                margin: "35% / Tahun",
+                bagiHasil: "Investor 40% : Tim IT 60%",
+                durasi: "3 Tahun",
+                detail: "Pendanaan operasional tim developer untuk menyelesaikan modul software kasir & inventory berbasis cloud untuk UMKM dengan target 1000 subscriber di tahun pertama."
+            }
+        ];
+
+        // --- FUNGSI MENGIRIM KE WHATSAPP ---
+        function gabungProyek(judulProyek, nilai, margin, bagiHasil) {
+            // Memformat pesan yang akan dikirim ke Admin
+            const pesan = `Halo Tim InvestaPro, 
+Saya berminat dan ingin berdiskusi lebih lanjut mengenai peluang investasi pada proyek berikut:
+
+🏢 *Detail Proyek:*
+- *Nama Proyek:* ${judulProyek}
+- *Nilai Investasi:* ${nilai}
+- *Estimasi Margin:* ${margin}
+- *Skema Bagi Hasil:* ${bagiHasil}
+
+Mohon informasikan ketersediaan slot, proposal lengkap (PDF), dan jadwal konsultasi/meeting. Terima kasih.`;
+
+            // Melakukan encode agar format teks (spasi, enter) terbaca dengan benar di URL
+            const pesanEncoded = encodeURIComponent(pesan);
+            
+            // Membuat link WA dan membukanya di tab baru
+            const linkWA = `https://wa.me/${NOMOR_WA_ADMIN}?text=${pesanEncoded}`;
+            window.open(linkWA, '_blank');
+        }
+
+        // --- FUNGSI MERENDER KARTU PROYEK KE HTML ---
+        function tampilkanProyek() {
+            const container = document.getElementById('project-container');
+            let htmlContent = '';
+
+            daftarProyek.forEach(proyek => {
+                htmlContent += `
+                <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden flex flex-col group">
+                    <!-- Image Container -->
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="${proyek.gambar}" alt="${proyek.judul}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-4 left-4 bg-primary-600 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg">
+                            ${proyek.kategori}
+                        </div>
+                    </div>
+                    
+                    <!-- Content -->
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 leading-snug group-hover:text-primary-600 transition-colors">${proyek.judul}</h3>
+                        
+                        <p class="text-gray-600 text-sm mb-6 line-clamp-3 flex-grow">
+                            ${proyek.detail}
+                        </p>
+                        
+                        <!-- Financial Details Box -->
+                        <div class="bg-blue-50/50 rounded-xl p-4 mb-6 border border-blue-100">
+                            <div class="grid grid-cols-2 gap-4 text-sm">
+                                <div>
+                                    <p class="text-gray-500 text-xs mb-1">Nilai Investasi</p>
+                                    <p class="font-bold text-gray-900">${proyek.nilaiInvestasi}</p>
+                                </div>
+                                <div>
+                                    <p class="text-gray-500 text-xs mb-1">Durasi</p>
+                                    <p class="font-bold text-gray-900"><i class="fa-regular fa-clock text-primary-500 mr-1"></i> ${proyek.durasi}</p>
+                                </div>
+                                <div class="col-span-2 border-t border-blue-100 pt-3 mt-1">
+                                    <p class="text-gray-500 text-xs mb-1">Margin Proyek</p>
+                                    <p class="font-bold text-green-600"><i class="fa-solid fa-arrow-trend-up mr-1"></i> ${proyek.margin}</p>
+                                </div>
+                                <div class="col-span-2 pt-1">
+                                    <p class="text-gray-500 text-xs mb-1">Bagi Hasil</p>
+                                    <p class="font-semibold text-gray-800"><i class="fa-solid fa-handshake-angle text-primary-500 mr-1"></i> ${proyek.bagiHasil}</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- CTA Button -->
+                        <button 
+                            onclick="gabungProyek('${proyek.judul}', '${proyek.nilaiInvestasi}', '${proyek.margin}', '${proyek.bagiHasil}')"
+                            class="w-full bg-primary-600 hover:bg-primary-700 text-white font-semibold py-3 px-4 rounded-xl transition-colors flex items-center justify-center gap-2 shadow-sm hover:shadow-md">
+                            <i class="fa-brands fa-whatsapp text-lg"></i>
+                            JOIN & Minta Detail
+                        </button>
+                    </div>
+                </div>
+                `;
+            });
+
+            container.innerHTML = htmlContent;
+        }
+
+        // Panggil fungsi saat halaman selesai dimuat
+        document.addEventListener('DOMContentLoaded', tampilkanProyek);
+    </script>
+</body>
+</html>
